@@ -20,6 +20,9 @@ server.listen(3001, function () {
 io.on('connection', function (socket) {
     console.log(io.sockets);
 });
+app.get('/smth', function (req, res) {
+    res.send('RESPONSE!!!11');
+});
 app.post('/singlePlayer', function (req, res) {
     var body = req.body;
     var player = PlayerActions_1.generateSinglePlayer(body);
